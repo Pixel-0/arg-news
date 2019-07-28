@@ -56,4 +56,22 @@ def process_results(news_sources_results_list):
         news_sources_object = Source(id, title,name,description,url)
         news_sources_result.append(news_sources_object)
         
-        return news_sources_result
+    return news_sources_result
+
+def get_articles(Source_id):
+    '''
+    function to get article json results 
+    '''
+    get_articles_url = article_url.format(Source_id.api_key)
+
+    with urllib.request.urlopen(get_articles_url) as url:
+        get_articles_data = url.read()
+        get_articles_response = json.loads(get_articles_data)
+
+        article_results = None
+
+        if get_articles_response['articles']:
+            article_results_list = get_articles_response['articles']
+            article_results = process_articles(article_results_list)
+
+    return article_results
