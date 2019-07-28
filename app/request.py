@@ -38,3 +38,22 @@ def get_news_Sources(category):
             news_sources_result = process_results(news_sources_results_list)
 
     return news_sources_result
+
+def process_results(news_sources_results_list):
+    '''
+    function to process json data into class objects
+    '''
+    news_sources_result = []
+
+    for news_item in news_sources_result:
+        id = news_item.get('id')
+        name = news_item.get('title')
+        title = news_item.get('name')
+        description = news_item.get('description')
+        url = news_item.get(url)
+
+
+        news_sources_object = Source(id, title,name,description,url)
+        news_sources_result.append(news_sources_object)
+        
+        return news_sources_result
