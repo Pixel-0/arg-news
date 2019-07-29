@@ -19,7 +19,7 @@ def index():
     return render_template('index.html', general = general_newssource, technology = technology_newssource, entertainment = entertainment_newssources, sports = sports_newssources, business = business_newssource, science = science_newssource)
 
 
-@main..route('/search/,article_name>')
+@main.route('/search/,article_name>')
 def articles(source_id):
     '''
     renders the artices template
@@ -34,5 +34,13 @@ def articles(source_id):
         return redirect(url_for('.search',article_name = search_article))
     else:
         return render_template('article.html',title = title, articles = article)
-        
-    
+
+
+# @main.route('/search/<article_name>')
+# def search(article_name):
+#     '''
+#     displays search results
+#     '''
+#     article_name_list = article_name.split(" ")
+#     article_name_format = "+".join(article_name_list)
+#     searched_articles = search_article(article_name_format)
