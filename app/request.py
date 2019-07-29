@@ -18,7 +18,7 @@ def configure_request(app):
     global api_key, article_url,search_url,sources_url
     api_key = app.config['NEWS_API_KEY']
     sources_url = app.config['SOURCES_BASE_URL']
-    article_url = app.config[' ARTICLES_BASE_URL']
+    article_url = app.config['ARTICLES_BASE_URL']
     search_url = app.config['SEARCH_BASE_URL']
 
 def get_news_Sources(category):
@@ -73,5 +73,24 @@ def get_articles(Source_id):
         if get_articles_response['articles']:
             article_results_list = get_articles_response['articles']
             article_results = process_articles(article_results_list)
+
+    return article_results
+
+def process_articles(articles_list):
+    '''
+    Transforms jso data to objects
+    '''
+    article_results = []
+
+    for article_item in articles_list:
+        title = article_item.get('title')
+        description = article_item.get('description')
+        url = article_item.get('url')
+        urlToImage = article_item.get('urlToImage')
+
+
+        if urlToImage:
+            articles_object = Article(id,title,description,url,urlToImage)
+            article_results.append(articles_object)
 
     return article_results
