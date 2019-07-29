@@ -1,22 +1,27 @@
 class Source:
     '''
-    Source class for news source objects
+    Source class to define Source Objects
     '''
-    def __init__(self,id,name,title,description, url):
-        self.id = id
-        self.name = name
+
+    def __init__(self,id,name,title,description,url):
+        self.id =id
+        self.name=name
         self.title = title
         self.description = description
         self.url = url
+        
+
+
 
 class Article:
+
     '''
-    Class to define article Objects
+    Aticle class to define Article Objects
     '''
-    def __init__(self,id,title,description, url, urlToImage):
-        self.id = id
+
+
+    def __init__(self,title,description,url,urlToImage):
         self.title = title
         self.description = description
         self.url = url
         self.urlToImage = urlToImage
-

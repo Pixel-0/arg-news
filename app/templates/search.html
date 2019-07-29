@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content%}
+
+<!-- Body Section -->
+<div class="container wrapper">
+    <div class="row">
+        {% for article in articles%}
+        <div class="col-sm-6 d-flex mb-3">
+            <div class="card border-dark flex-fill">
+                <a href="{{article.url}}" target="_blank">
+                    <img class="card-img-top" src="{{article.urlToImage}}" alt="Image of {{article.title}}">
+                </a>
+                <div class="card-body">
+                    <h4 class="card-title">{{article.title}}</h4>
+                    <hr>
+                    <p>{{article.description|truncate(200)}}...
+                        <a href="{{article.url}}" target="_blank">View Article on site</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
