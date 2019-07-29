@@ -2,12 +2,14 @@
     text-align: center;
     color: white;
     font-size: 25px;
-    background-color:black;
+    background-image: url("https://wallpapercave.com/wp/wp4094536.jpg");
     opacity: 0.8;
   }
+  
  .source_title{
     text-align: center;
   }
+
   .dropdown-item{
       padding: 5px;
   }

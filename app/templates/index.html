@@ -1,3 +1,5 @@
+<link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
+
 {% extends 'base.html'%}
 {% import 'macros.html' as macro %}
 
@@ -12,16 +14,16 @@
 
 <div class="container-fluid">
     <div class="jumbotron">
-        <h3>Get the latest news from the most trusted sources</h3>
+        <h1 style="font-family: 'Kalam', cursive;">HufflePuff Post</h1>
     </div>
 </div>
 
 
 <!-- homepage section -->
-<div class="container ">
+<div class="jumbotron ">
     <div class="row" id="general">
         <div class="category col-md-12">
-            <h4 class="source_title">General News</h4>
+            <h2 class="source_title" style="font-family: 'Kalam', cursive;">General News</h2>
             <ul>
                 {{macro.displayNewsourceList(general)}}
             </ul>
@@ -29,41 +31,41 @@
     </div>
 </div>
 
-<div class="row" id="business">
+<div class="row jumbotron" id="business">
     <div class="category col-md-12">
-        <h4 class="source_title">Business</h4>
+        <h2 class="source_title" style="font-family: 'Kalam', cursive;">Business</h2>
         <ul>
             {{macro.displayNewsourceList(business)}}
         </ul>
     </div>
 </div>
-<div class="row" id="technology">
+<div class="row jumbotron" id="technology">
     <div class="category col-md-12">
-        <h4 class="source_title">Technology</h4>
+        <h2 class="source_title" style="font-family: 'Kalam', cursive;">Technology</h2>
         <ul>
             {{macro.displayNewsourceList(technology)}}
         </ul>
     </div>
 </div>
-<div class="row" id="sports">
+<div class="row jumbotron" id="sports">
     <div class="category col-md-12">
-        <h4 class="source_title">Sports</h4>
+        <h2 class="source_title" style="font-family: 'Kalam', cursive;">Sports</h2>
         <ul>
             {{macro.displayNewsourceList(sports)}}
         </ul>
     </div>
 </div>
-<div class="row" id="entertainment">
+<div class="row jumbotron" id="entertainment">
     <div class="category col-md-12">
-        <h4 class="source_title">Entertainment</h4>
+        <h2 class="source_title" style="font-family: 'Kalam', cursive;">Entertainment</h2>
         <ul>
             {{macro.displayNewsourceList(entertainment)}}
         </ul>
     </div>
 </div>
-<div class="row" id="science">
+<div class="row jumbotron" id="science">
     <div class="category col-md-12">
-        <h4 class="source_title">Science</h4>
+        <h2 class="source_title" style="font-family: 'Kalam', cursive;">Science</h2>
         <ul>
             {{macro.displayNewsourceList(science)}}
         </ul>

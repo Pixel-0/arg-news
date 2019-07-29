@@ -1,21 +1,23 @@
+<link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
+
 {% macro displayNewsourceList(newsource_list)%}
 <div class="container-fluid">
-    <div class="row">
-    {% for newsource in newsource_list %}
-    <div class="col-md-4 d-flex mb-3">
-    <div class="card border-dark flex-fill">
-        <div class="card-header">
-            <a href="{{newsource.url}}" target="_blank">
-                <h5 class="source_title">{{newsource.name}}</h5>
-                    </a>
-        </div>
+    <div  class="row">
+        {% for newsource in newsource_list %}
+        <div class="col-md-4 d-flex mb-3 card thumbnail" style="color: black; margin: 3%;">
             <div class="card-body">
-            <p>{{newsource.description|truncate(200)}}</p>
-            <a href="/articles/{{newsource.id}}">View Articles</a>
+                <div class="card-header">
+                    <a href="{{newsource.url}}" target="_blank">
+                        <h4 class="card-title" style="font-family: 'Kalam', cursive;">{{newsource.name}}</h4>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <p>{{newsource.description|truncate(200)}}</p>
+                    <a style="font-family: 'Kalam', cursive;" href="/articles/{{newsource.id}}">Read More...</a>
+                </div>
             </div>
-          </div>
         </div>
-    {% endfor %}
+        {% endfor %}
     </div>
 </div>
 {% endmacro %}

@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/smoucha/Desktop/ips/flask/News-highlight/virtual"
+VIRTUAL_ENV="/home/mark/Desktop/argentum/News-highlight/virtual"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
