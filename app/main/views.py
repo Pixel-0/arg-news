@@ -17,6 +17,22 @@ def index():
     science_newssource = get_news_Sources('science')
 
     return render_template('index.html', general = general_newssource, technology = technology_newssource, entertainment = entertainment_newssources, sports = sports_newssources, business = business_newssource, science = science_newssource)
-    
 
+
+@main..route('/search/,article_name>')
+def articles(source_id):
+    '''
+    renders the artices template
+    '''
+
+    #getting articles
+    article = get_articles(source_id)
+    title = f'{ source_id }'
+
+    search_article = request.args.get('article_query')
+    if search_article:
+        return redirect(url_for('.search',article_name = search_article))
+    else:
+        return render_template('article.html',title = title, articles = article)
+        
     
