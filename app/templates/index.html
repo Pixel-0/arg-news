@@ -3,7 +3,7 @@
 
 {% block styles %}
     {{ super() }}
-    <link rel= "stylesheet" href="{{url_for('ststic',filename = 'css/index.css')}}">
+    <link rel= "stylesheet" href="{{url_for('static',filename = 'css/index.css')}}">
 {% endblock %}
 
 {% block content %}
@@ -19,7 +19,7 @@
         <div class="col-md-12">
             <h3>General News</h3>
             <ul>
-                {{macro.displaNewsourceList(general)}}
+                {{macro.displayNewsSourceList(general)}}
             </ul>
         </div>
     </div>
@@ -28,7 +28,7 @@
     <div class="col-md-12">
         <h3>Business News</h3>
         <ul>
-            {{macro.displaNewsourceList(business)}}
+            {{macro.displayNewsSourceList(business)}}
         </ul>
     </div>
 </div>
@@ -37,7 +37,7 @@
     <div class="col-md-12">
         <h3>Technology News</h3>
         <ul>
-            {{macro.displaNewsourceList(technology)}}
+            {{macro.displayNewsSourceList(technology)}}
         </ul>
     </div>
 </div>
@@ -46,7 +46,7 @@
     <div class="col-md-12">
         <h3>Sports News</h3>
         <ul>
-            {{macro.displaNewsourceList(sports)}}
+            {{macro.displayNewsSourceList(sports)}}
         </ul>
     </div>
 </div>
@@ -55,7 +55,7 @@
     <div class="col-md-12">
         <h3>Science News</h3>
         <ul>
-            {{macro.displaNewsourceList(science)}}
+            {{macro.displayNewsSourceList(science)}}
         </ul>
     </div>
 </div>
@@ -64,7 +64,7 @@
     <div class="col-md-12">
         <h3>Entertainment News</h3>
         <ul>
-            {{macro.displaNewsourceList(entertainment)}}
+            {{macro.displayNewsSourceList(entertainment)}}
         </ul>
     </div>
 </div>
