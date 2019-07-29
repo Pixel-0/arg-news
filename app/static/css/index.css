@@ -8,3 +8,6 @@
  .source_title{
     text-align: center;
   }
+  .dropdown-item{
+      padding: 5px;
+  }
